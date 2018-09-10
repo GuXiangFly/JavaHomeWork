@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suite name = 'test'>
+    <test name="grouptest">
+        <groups>
+            <run>
+                <include name="student"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="cn.guxiangfly.testng.groups.GroupOnClass1"></class>
+            <class name="cn.guxiangfly.testng.groups.GroupOnClass2"></class>
+            <class name="cn.guxiangfly.testng.groups.GroupOnClass3"></class>
+        </classes>
+    </test>
+</suite>

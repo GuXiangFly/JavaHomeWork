@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suite name = 'test'>
+    <test name="login">
+        <classes>
+            <class name="cn.guxiangfly.testng.suite.SuiteConfig"></class>
+            <class name="cn.guxiangfly.testng.suite.LoginTest"></class>
+        </classes>
+    </test>
+</suite>
