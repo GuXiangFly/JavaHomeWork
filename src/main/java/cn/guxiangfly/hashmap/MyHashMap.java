@@ -1,6 +1,8 @@
 package cn.guxiangfly.hashmap;
 
 
+import com.example.jctree.Main;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,10 +68,29 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
                 } while (entry != null);
             }
         }
+
+        if (newTable.length>0){
+            table = newTable;
+        }
+        for (Entry<K, V> entry : entryArrayList) {
+            put(entry.getKey(),entry.getValue());
+        }
     }
 
     @Override
     public V get(K k) {
+        int index = hash(k)&(defaultIntSize-1);
+        if (table[index] == null){
+            return null;
+        }else {
+            Entry<K,V> entry =  table[index];
+            do {
+                if (k==entry.getKey()||k.equals(entry.getKey())){
+                    return entry.value;
+                }
+                entry = entry.next;
+            }while (entry!=null);
+        }
         return null;
     }
 
@@ -99,6 +120,17 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
             ++entryUseSize;
         }
         return oldValue;
+    }
+
+    public static void main(String[] args) {
+        MyHashMap myHashMap = new MyHashMap();
+        for (int i = 0; i < 200; i++) {
+            myHashMap.put("key"+i,"value"+i);
+        }
+
+        for (int i = 0; i < 200; i++) {
+            System.err.println(myHashMap.get("key"+i));
+        }
     }
 
     class Entry<K, V> implements MyMap.Entry<K, V> {
