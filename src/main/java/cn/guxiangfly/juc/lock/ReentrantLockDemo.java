@@ -14,7 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 	方法a  和 方法b   都使用 对象M 来锁，方法a中调用了方法b ， 那么线程是不需要竞争b上的锁，直接可以访问b方法的，这就会造成 锁重入，
  *
  * 重入锁的意思：
- * 	 能产生 锁重入 事件的锁 就是 重入锁    synchronized  就是重入锁
+ * 	 能产生 锁重入事件的锁 就是 重入锁    synchronized  就是重入锁
  */
 public class ReentrantLockDemo {
 

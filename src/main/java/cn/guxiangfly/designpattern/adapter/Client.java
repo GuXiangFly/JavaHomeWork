@@ -16,7 +16,6 @@ public class Client {
         Client c = new Client();
         Adaptee a = new Adaptee();
         Target t= new Adapter2(a);
-
         c.test1(t);
     }
 }
