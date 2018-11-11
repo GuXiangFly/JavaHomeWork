@@ -57,6 +57,8 @@ public class DymaicArray {
 
     }
 
+
+
     public int remove(int index){
         int ret=  data[index];
         if(index < 0 || index > size)

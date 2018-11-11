@@ -5,7 +5,7 @@ package cn.guxiangfly.algorithm.dynamicArray;
  * @date : 2018 10/14/18
  * @desc : JavaHomeWork
  */
-public class DymaicArrayGenericity <E>{
+public class DymaicArrayGenericity <E extends Comparable<E>>{
 
     private E[] data;
     private int size;
@@ -14,6 +14,14 @@ public class DymaicArrayGenericity <E>{
     public DymaicArrayGenericity(int capacity){
         data =(E[]) new Object[capacity];
         size = 0;
+    }
+
+    public DymaicArrayGenericity(E[] arr){
+        data = (E[]) new Object[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            data[i] = arr[i];
+        }
+        size=arr.length;
     }
 
     // 无参数的构造函数，默认数组的容量capacity=10
@@ -133,6 +141,16 @@ public class DymaicArrayGenericity <E>{
         return get(0);
     }
 
+
+    public void swap(int i, int j){
+
+        if(i < 0 || i >= size || j < 0 || j >= size)
+            throw new IllegalArgumentException("Index is illegal.");
+
+        E t = data[i];
+        data[i] = data[j];
+        data[j] = t;
+    }
 
     @Override
     public String toString(){

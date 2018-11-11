@@ -8,7 +8,7 @@ import cn.guxiangfly.algorithm.dynamicArray.DymaicArrayGenericity;
  * @date : 2018 10/23/18
  * @desc : JavaHomeWork
  */
-public class ArrayQueue<E> implements Queue<E> {
+public class ArrayQueue<E extends Comparable<E>> implements Queue<E> {
 
     private DymaicArrayGenericity<E> array;
 
@@ -17,7 +17,7 @@ public class ArrayQueue<E> implements Queue<E> {
     }
 
     public ArrayQueue(){
-        array = new DymaicArrayGenericity<>();
+        array = new DymaicArrayGenericity<E>();
     }
 
     @Override
