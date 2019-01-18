@@ -17,8 +17,6 @@ public class LinkedList<T> {
     }
 
 
-
-
     private class  Node<T> {
         private T value;
         private Node<T> next;
@@ -27,7 +25,6 @@ public class LinkedList<T> {
             this.value = value;
             this.next = next;
         }
-
     }
 
     public void appendLeft(T value){
@@ -40,7 +37,6 @@ public class LinkedList<T> {
         if (tail==null){
             return null;
         }
-
         if (head==tail) {
             T res = head.value;
             head = tail = null;
@@ -54,7 +50,6 @@ public class LinkedList<T> {
             cur = cur.next;
         tail=cur;
         return tail.next.value;
-
     }
 
 

@@ -31,7 +31,7 @@ import java.util.concurrent.*;
 public class TestThreadPool {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //创建线程池
-        ExecutorService pool = Executors.newFixedThreadPool(10);
+        ExecutorService pool = Executors.newCachedThreadPool(10);
         ThreadPoolDemo threadPoolDemo = new ThreadPoolDemo();
         List<Future<Integer>> list = new ArrayList<>();
 

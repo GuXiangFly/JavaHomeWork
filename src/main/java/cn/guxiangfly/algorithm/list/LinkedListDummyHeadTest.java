@@ -30,8 +30,6 @@ public class LinkedListDummyHeadTest {
 
         linkedList.removeLast();
         System.out.println(linkedList);
-
-
     }
 
 }
