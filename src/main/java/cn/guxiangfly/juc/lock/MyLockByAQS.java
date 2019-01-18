@@ -1,6 +1,5 @@
 package cn.guxiangfly.juc.lock;
 
-import sun.tools.jconsole.Plotter;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;

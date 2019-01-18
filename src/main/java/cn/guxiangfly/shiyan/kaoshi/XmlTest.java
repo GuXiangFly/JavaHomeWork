@@ -23,8 +23,8 @@ public class XmlTest {
         SAXReader saxReader = new SAXReader();
         Document document = saxReader.read("D:\\IntellijIDEAWorkSpace\\JavaHomeWork\\src\\main\\resources\\book.xml");
         Element rootElement = document.getRootElement();
-        Object 书 = rootElement.element("书").element("书名").getText();
-        System.out.println(书);
+        Object shu = rootElement.element("书").element("书名").getText();
+        System.out.println(shu);
 
         Element book2 = rootElement.addElement("书");
         book2.addAttribute("出版社","淮阴工学院");

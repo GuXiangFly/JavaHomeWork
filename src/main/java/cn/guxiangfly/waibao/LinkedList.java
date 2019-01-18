@@ -1,6 +1,6 @@
 package cn.guxiangfly.waibao;
 
-import com.example.jctree.TreeNode;
+
 
 /**
  * LinkedList
